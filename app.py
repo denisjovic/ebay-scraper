@@ -23,9 +23,9 @@ def send_email():
     conn = smtplib.SMTP('smtp.gmail.com', 587)
     conn.ehlo()
     conn.starttls()
-    print(conn.login('psychobuddha.webdev@gmail.com', 'yourpassword'))
-    conn.sendmail('psychobuddha.webdev@gmail.com', 'denisjovic@pm.me',
-                  'Subject: Price is DOWN  \n\nDear Denis, the price is below $100, buy it!! Here is the link:\n'
+    print(conn.login('your_gmail', 'your_password'))
+    conn.sendmail('your_gmail', 'target_email',
+                  'Subject: Price is DOWN  \n\nDear XXX, the price is below $70, buy it!! Here is the link:\n'
                   'https://www.ebay.com/itm/Garmin-Forerunner-620-GPS-Running-Watch-Blue-Black-with-charger/113920896303?hash=item1a8636ed2f%3Ag%3Az5oAAOSwsw9doMt7&LH_BIN=1')
     print('Email sent!')
     conn.quit() 
